@@ -16,14 +16,24 @@ public:
     double getY();
     double getZ();
 
-    Vector3D operator+(const Vector3D v1, const Vector3D v2);
-    Vector3D operator-(const Vector3D v1, const Vector3D v2);
+    Vector3D operator+(const Vector3D v2);
+    Vector3D operator-(const Vector3D v2);
 
     Vector3D& operator+=(const Vector3D v2);
     Vector3D& operator-=(const Vector3D v2);
 
     Vector3D& operator+=(const double num);
     Vector3D& operator-=(const double num);
+
+    Vector3D& operator-();
+
+    Vector3D operator*(const double num);
+    Vector3D operator/(const double num);
+
+    Vector3D operator*(const Vector3D v2);
+
+
+
 
 
 

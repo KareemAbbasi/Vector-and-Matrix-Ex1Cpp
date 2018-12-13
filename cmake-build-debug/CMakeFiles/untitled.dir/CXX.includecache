@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cs/usr/kareem/CLionProjects/ex1/Vector3D.cpp
+Vector3D.h
+/cs/usr/kareem/CLionProjects/ex1/Vector3D.h
+iostream
+-
+
+/cs/usr/kareem/CLionProjects/ex1/Vector3D.h
+
