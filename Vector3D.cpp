@@ -38,37 +38,47 @@ double Vector3D::getY() { return y; }
 
 double Vector3D::getZ() { return z; }
 
-Vector3D Vector3D::operator+(const Vector3D v2)
+Vector3D Vector3D::operator+(const Vector3D v1, const Vector3D v2)
 {
     double newX, newY, newZ;
-    newX = x + v2.x;
-    newY = y + v2.y;
-    newZ = z + v2.z;
+    newX = v1.x + v2.x;
+    newY = v1.y + v2.y;
+    newZ = v1.z + v2.z;
 
     return Vector3D(newX, newY, newZ);
 }
 
-Vector3D Vector3D::operator-(const Vector3D v2)
+Vector3D Vector3D::operator-(const Vector3D v1, const Vector3D v2)
 {
     double newX, newY, newZ;
-    newX = x - v2.x;
-    newY = y - v2.y;
-    newZ = z - v2.z;
+    newX = v1.x - v2.x;
+    newY = v1.y - v2.y;
+    newZ = v1.z - v2.z;
 
     return Vector3D(newX, newY, newZ);
 }
 
-Vector3D Vector3D::operator+=(const Vector3D v2)
+Vector3D& Vector3D::operator+=(const Vector3D v2)
 {
-    return operator+(v2);
+    this->x += v2.x;
+    this->y += v2.y;
+    this->z += v2.z;
+
+    return *this;
 }
 
-Vector3D Vector3D::operator-=(const Vector3D v2)
+Vector3D& Vector3D::operator-=(const Vector3D v2)
 {
-    return operator-(v2);
+    return operator-(this, v2);
 }
 
-Vector3D Vector3D::operator+=(const double num)
+Vector3D& Vector3D::operator+=(const double num)
 {
-
+    return Vector3D(x + num, y + num, z + num);
 }
+
+Vector3D& Vector3D::operator-=(const double num)
+{
+    return Vector3D(x - num, y - num, z - num);
+}
+
