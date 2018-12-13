@@ -16,8 +16,9 @@ public:
     double getY();
     double getZ();
 
-    Vector3D operator+(const Vector3D v2);
-    Vector3D operator-(const Vector3D v2);
+
+    friend Vector3D operator+(const Vector3D v1, const Vector3D v2);
+    friend Vector3D operator-(const Vector3D v1, const Vector3D v2);
 
     Vector3D& operator+=(const Vector3D v2);
     Vector3D& operator-=(const Vector3D v2);
@@ -27,18 +28,17 @@ public:
 
     Vector3D& operator-();
 
-    Vector3D operator*(const double num);
-    Vector3D operator/(const double num);
+    friend Vector3D operator*(const Vector3D v2, const double num);
+    friend Vector3D operator/(const Vector3D v2, const double num);
 
-    Vector3D operator*(const Vector3D v2);
+    friend Vector3D operator*(const double num, const Vector3D v2);
 
+    Vector3D& operator*=(const double num);
+    Vector3D& operator/=(const double num);
 
-
-
-
-
-
-
+    friend double operator|(const Vector3D v1, const Vector3D v2);
+    friend double operator*(const Vector3D v1, const Vector3D v2);
+    friend double operator^(const Vector3D v1, const Vector3D v2);
 
 private:
     double x, y, z;
