@@ -57,18 +57,18 @@ include CMakeFiles/untitled.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/untitled.dir/flags.make
 
-CMakeFiles/untitled.dir/main.cpp.o: CMakeFiles/untitled.dir/flags.make
-CMakeFiles/untitled.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cs/usr/kareem/CLionProjects/ex1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/untitled.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/untitled.dir/main.cpp.o -c /cs/usr/kareem/CLionProjects/ex1/main.cpp
+CMakeFiles/untitled.dir/ex1.cpp.o: CMakeFiles/untitled.dir/flags.make
+CMakeFiles/untitled.dir/ex1.cpp.o: ../ex1.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cs/usr/kareem/CLionProjects/ex1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/untitled.dir/ex1.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/untitled.dir/ex1.cpp.o -c /cs/usr/kareem/CLionProjects/ex1/ex1.cpp
 
-CMakeFiles/untitled.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/untitled.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cs/usr/kareem/CLionProjects/ex1/main.cpp > CMakeFiles/untitled.dir/main.cpp.i
+CMakeFiles/untitled.dir/ex1.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/untitled.dir/ex1.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cs/usr/kareem/CLionProjects/ex1/ex1.cpp > CMakeFiles/untitled.dir/ex1.cpp.i
 
-CMakeFiles/untitled.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cs/usr/kareem/CLionProjects/ex1/main.cpp -o CMakeFiles/untitled.dir/main.cpp.s
+CMakeFiles/untitled.dir/ex1.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled.dir/ex1.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cs/usr/kareem/CLionProjects/ex1/ex1.cpp -o CMakeFiles/untitled.dir/ex1.cpp.s
 
 CMakeFiles/untitled.dir/Vector3D.cpp.o: CMakeFiles/untitled.dir/flags.make
 CMakeFiles/untitled.dir/Vector3D.cpp.o: ../Vector3D.cpp
@@ -98,14 +98,14 @@ CMakeFiles/untitled.dir/Matrix3D.cpp.s: cmake_force
 
 # Object files for target untitled
 untitled_OBJECTS = \
-"CMakeFiles/untitled.dir/main.cpp.o" \
+"CMakeFiles/untitled.dir/ex1.cpp.o" \
 "CMakeFiles/untitled.dir/Vector3D.cpp.o" \
 "CMakeFiles/untitled.dir/Matrix3D.cpp.o"
 
 # External object files for target untitled
 untitled_EXTERNAL_OBJECTS =
 
-untitled: CMakeFiles/untitled.dir/main.cpp.o
+untitled: CMakeFiles/untitled.dir/ex1.cpp.o
 untitled: CMakeFiles/untitled.dir/Vector3D.cpp.o
 untitled: CMakeFiles/untitled.dir/Matrix3D.cpp.o
 untitled: CMakeFiles/untitled.dir/build.make

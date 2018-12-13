@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/untitled.dir/main.cpp.o CMakeFiles/untitled.dir/Vector3D.cpp.o CMakeFiles/untitled.dir/Matrix3D.cpp.o  -o untitled 
+/usr/bin/c++  -g   CMakeFiles/untitled.dir/ex1.cpp.o CMakeFiles/untitled.dir/Vector3D.cpp.o CMakeFiles/untitled.dir/Matrix3D.cpp.o  -o untitled 

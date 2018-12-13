@@ -177,32 +177,32 @@ Vector3D.cpp.s:
 	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/Vector3D.cpp.s
 .PHONY : Vector3D.cpp.s
 
-main.o: main.cpp.o
+ex1.o: ex1.cpp.o
 
-.PHONY : main.o
+.PHONY : ex1.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/main.cpp.o
-.PHONY : main.cpp.o
+ex1.cpp.o:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/ex1.cpp.o
+.PHONY : ex1.cpp.o
 
-main.i: main.cpp.i
+ex1.i: ex1.cpp.i
 
-.PHONY : main.i
+.PHONY : ex1.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/main.cpp.i
-.PHONY : main.cpp.i
+ex1.cpp.i:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/ex1.cpp.i
+.PHONY : ex1.cpp.i
 
-main.s: main.cpp.s
+ex1.s: ex1.cpp.s
 
-.PHONY : main.s
+.PHONY : ex1.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/main.cpp.s
-.PHONY : main.cpp.s
+ex1.cpp.s:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/ex1.cpp.s
+.PHONY : ex1.cpp.s
 
 # Help Target
 help:
@@ -219,9 +219,9 @@ help:
 	@echo "... Vector3D.o"
 	@echo "... Vector3D.i"
 	@echo "... Vector3D.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... ex1.o"
+	@echo "... ex1.i"
+	@echo "... ex1.s"
 .PHONY : help
 
 

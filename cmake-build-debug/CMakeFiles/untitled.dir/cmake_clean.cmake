@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/untitled.dir/main.cpp.o"
+  "CMakeFiles/untitled.dir/ex1.cpp.o"
   "CMakeFiles/untitled.dir/Vector3D.cpp.o"
   "CMakeFiles/untitled.dir/Matrix3D.cpp.o"
   "untitled.pdb"
