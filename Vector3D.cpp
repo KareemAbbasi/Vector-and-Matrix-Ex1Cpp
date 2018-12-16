@@ -3,6 +3,8 @@
 //
 
 #include "Vector3D.h"
+//TODO remove this include
+#include "Matrix3D.h"
 #include <iostream>
 #include <cmath>
 
@@ -29,9 +31,9 @@ Vector3D::Vector3D(double *d)
 
 Vector3D::Vector3D(const Vector3D &vector3D)
 {
-    x = vector3D.x;
-    y = vector3D.y;
-    z = vector3D.z;
+    this->x = vector3D.x;
+    this->y = vector3D.y;
+    this->z = vector3D.z;
 }
 
 double Vector3D::getX() { return x; }
@@ -137,23 +139,46 @@ double operator*(const Vector3D v1, const Vector3D v2) {
     return ((v1.x * v2.x) + (v1.y * v2.y) + (v1.z * v2.z));
 }
 
-
-int main()
+double operator^(Vector3D v1, Vector3D v2)
 {
-    Vector3D v1 = Vector3D(1,2,3);
-    std::cout << v1.getX() << " " << v1.getY() << " " << v1.getZ() << std::endl;
-//    Vector3D v2 = Vector3D(1,0,3);
-//    std::cout << v2.getX() << " " << v2.getY() << " " << v2.getZ() << std::endl;
+    double cosineTheta = (v1 * v2) / (v1.norm() * v2.norm());
+    return acos(cosineTheta);
+}
 
-    -v1;
-    std::cout << v1.getX() << " " << v1.getY() << " " << v1.getZ() << std::endl;
+double Vector3D::norm()
+{
+    return sqrt(pow(x, 2) + pow(y, 2) + pow(z, 2));
+}
 
-    Vector3D newVec = v1 * 2;
+double Vector3D::dist(const Vector3D v2)
+{
+    return sqrt(pow((x - v2.x), 2) + pow((y - v2.y), 2) + pow((z - v2.z), 2));
+}
 
-    std::cout << newVec.getX() << " " << newVec.getY() << " " << newVec.getZ() << std::endl;
+//TODO check school output.
+std::ostream& operator<<(std::ostream &out, const Vector3D vec)
+{
+    out << "Vector: " << vec.x << ", " << vec.y << ", " << vec.z;
+    return out;
+}
 
-    Vector3D newVec2 = 2 * v1;
-    std::cout << newVec2.getX() << " " << newVec2.getY() << " " << newVec2.getZ() << std::endl;
+Vector3D& Vector3D::operator=(const Vector3D v2)
+{
+    this->x = v2.x;
+    this->y = v2.y;
+    this->z = v2.z;
+
+    return *this;
+}
+
+int main(){
+    Vector3D a(3.0, 2.0, 5.0);
+    std::cout << "a.norm = " << a.norm() << std::endl;
+    Vector3D b(7.0, 1.0, 0.0);
+    std::cout << "a.dist(b) = " << a.dist(b) << std::endl;
+    Vector3D c(5.0, 1.0, 4.0);
+
     return 0;
+
 }
 
