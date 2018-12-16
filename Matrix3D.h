@@ -44,6 +44,7 @@ public:
     Vector3D row(short index);
     Vector3D column(short index);
     double trace();
+    double determinant();
 
     friend Matrix3D findTranspose(Matrix3D m);
 

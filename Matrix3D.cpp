@@ -266,3 +266,25 @@ Vector3D Matrix3D::column(short index)
     return transposed.arrayVectors[index];
 
 }
+
+double Matrix3D::trace()
+{
+    double sum;
+    for (int i = 0; i < 3; ++i)
+    {
+        for (int j =0; j < 3; ++j)
+        {
+            if (i==j)
+            {
+                sum += this->arrayVectors[i][j];
+            }
+        }
+    }
+
+    return sum;
+}
+
+double Matrix3D::determinant()
+{
+
+}
