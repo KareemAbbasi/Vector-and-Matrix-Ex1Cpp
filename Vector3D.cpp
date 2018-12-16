@@ -155,10 +155,16 @@ double Vector3D::dist(const Vector3D v2)
     return sqrt(pow((x - v2.x), 2) + pow((y - v2.y), 2) + pow((z - v2.z), 2));
 }
 
+std::istream& operator>>(std::istream &in, Vector3D& v1)
+{
+    in >> v1.x >> v1.y >> v1.z;
+    return in;
+}
+
 //TODO check school output.
 std::ostream& operator<<(std::ostream &out, const Vector3D vec)
 {
-    out << "Vector: " << vec.x << ", " << vec.y << ", " << vec.z;
+    out << vec.x << " " << vec.y << " " << vec.z << std::endl;
     return out;
 }
 
@@ -171,12 +177,46 @@ Vector3D& Vector3D::operator=(const Vector3D v2)
     return *this;
 }
 
+
+double& Vector3D::operator[](int index)
+{
+    switch(index)
+    {
+        case 0:
+            return this->x;
+        case 1:
+            return this->y;
+        case 2:
+            return this->z;
+        default:
+            throw std::out_of_range("Index out of range");
+    }
+}
+
+
 int main(){
     Vector3D a(3.0, 2.0, 5.0);
     std::cout << "a.norm = " << a.norm() << std::endl;
-    Vector3D b(7.0, 1.0, 0.0);
+    Vector3D b(7.0, 1.0, 5);
     std::cout << "a.dist(b) = " << a.dist(b) << std::endl;
-    Vector3D c(5.0, 1.0, 4.0);
+
+    Vector3D c(1, 1, 1);
+
+    Matrix3D m(a,b,c);
+    Matrix3D m1(1,2,3,4,1,0,0,8,1);
+
+//    m*=m1;
+    Matrix3D nm = m *m1;
+
+    std::cout << nm;
+
+    Vector3D vec = m * a;
+    std::cout << "..." << std::endl;
+    std::cout << m << std::endl;
+
+//    m[1] = a + b;
+    std::cout << "..." << std::endl;
+    std::cout << m.column(-1) << std::endl;
 
     return 0;
 

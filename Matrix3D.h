@@ -25,6 +25,27 @@ public:
 
     Matrix3D& operator*=(Matrix3D m2);
 
+    friend Matrix3D operator*(const Matrix3D m1, const Matrix3D m2);
+    friend Matrix3D operator+(const Matrix3D m1, const Matrix3D m2);
+    friend Matrix3D operator-(const Matrix3D m1, const Matrix3D m2);
+
+    Matrix3D& operator*=(double num);
+    Matrix3D& operator/=(double num);
+
+    friend Vector3D operator*(Matrix3D m1, Vector3D v);
+
+    friend std::istream& operator>>(std::istream &in, Matrix3D &m1);
+    friend std::ostream& operator<<(std::ostream &out, Matrix3D &m1);
+
+
+
+    Vector3D& operator[](int index);
+
+    Vector3D row(short index);
+    Vector3D column(short index);
+    double trace();
+
+    friend Matrix3D findTranspose(Matrix3D m);
 
 
 private:

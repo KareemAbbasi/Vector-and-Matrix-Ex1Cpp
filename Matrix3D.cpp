@@ -100,17 +100,169 @@ Matrix3D& Matrix3D::operator-=(const Matrix3D m2)
 
 Matrix3D& Matrix3D::operator*=(Matrix3D m2)
 {
+    Matrix3D m2Transpose = findTranspose(m2);
+
     for (int i = 0; i < 3; ++i)
     {
-        double vecValues[3];
-
+        Vector3D newRow;
         for (int j = 0; j < 3; ++j)
         {
-            vecValues[j] = this->arrayVectors[i].getX() * m2.arrayVectors[j].getX();
+            double newVal = this->arrayVectors[i]* m2Transpose.arrayVectors[j];
+            newRow[j] = newVal;
         }
+        this->arrayVectors[i] = newRow;
+    }
+    return *this;
+}
 
-        this->arrayVectors[i] = Vector3D(vecValues);
+Matrix3D operator*(const Matrix3D m1, const Matrix3D m2)
+{
+    Matrix3D newMat;
+    Matrix3D m2Transpose = findTranspose(m2);
+
+    for (int i = 0; i < 3; ++i)
+    {
+        Vector3D newRow;
+        for (int j = 0; j < 3; ++j)
+        {
+            double newVal = m1.arrayVectors[i]* m2Transpose.arrayVectors[j];
+            newRow[j] = newVal;
+        }
+        newMat.arrayVectors[i] = newRow;
+    }
+    return newMat;
+}
+
+Matrix3D operator+(Matrix3D m1, Matrix3D m2)
+{
+    Matrix3D newMat;
+    for (int i = 0; i < 3; ++i)
+    {
+        Vector3D newVec = Vector3D(m1.arrayVectors[i].getX() + m2.arrayVectors[i].getX(),
+                                   m1.arrayVectors[i].getY() + m2.arrayVectors[i].getY(),
+                                   m1.arrayVectors[i].getZ() + m2.arrayVectors[i].getZ());
+
+        newMat.arrayVectors[i] = newVec;
+    }
+
+    return newMat;
+}
+
+Matrix3D operator-(Matrix3D m1, Matrix3D m2)
+{
+    Matrix3D newMat;
+    for (int i = 0; i < 3; ++i)
+    {
+        Vector3D newVec = Vector3D(m1.arrayVectors[i].getX() - m2.arrayVectors[i].getX(),
+                                   m1.arrayVectors[i].getY() - m2.arrayVectors[i].getY(),
+                                   m1.arrayVectors[i].getZ() - m2.arrayVectors[i].getZ());
+
+        newMat.arrayVectors[i] = newVec;
+    }
+
+    return newMat;
+}
+
+Matrix3D& Matrix3D::operator*=(double num)
+{
+    for (Vector3D v : this->arrayVectors)
+    {
+        v = Vector3D(v.getX()*num, v.getY()*num, v.getZ()*num);
     }
 
     return *this;
+}
+
+Matrix3D& Matrix3D::operator/=(double num)
+{
+    for (Vector3D v : this->arrayVectors)
+    {
+        v = Vector3D(v.getX()/num, v.getY()/num, v.getZ()/num);
+    }
+
+    return *this;
+}
+
+
+//TODO wrong, need to return vector
+Vector3D operator*(Matrix3D m1, Vector3D v)
+{
+    Vector3D newVec;
+
+    for (int i = 0; i < 3; ++i)
+    {
+        newVec[i] = m1.arrayVectors[i] * v;
+    }
+
+    return newVec;
+}
+
+std::istream& operator>>(std::istream &in, Matrix3D &m1)
+{
+    for (Vector3D v : m1.arrayVectors)
+    {
+        in >> v;
+    }
+
+    return in;
+}
+
+std::ostream& operator<<(std::ostream &out, Matrix3D &m1)
+{
+    for (Vector3D v : m1.arrayVectors)
+    {
+        out << v;
+    }
+    return out;
+}
+
+Matrix3D findTranspose(Matrix3D m)
+{
+    Matrix3D m2Transpose;
+
+    for (int i = 0; i < 3; ++i)
+    {
+        Vector3D colVec;
+        for (int j = 0; j < 3; ++j)
+        {
+            colVec[j] = m.arrayVectors[j][i];
+        }
+
+        m2Transpose.arrayVectors[i] = colVec;
+    }
+
+    return m2Transpose;
+}
+
+Vector3D& Matrix3D::operator[](int index)
+{
+    switch(index)
+    {
+        case 0:
+            return this->arrayVectors[0];
+        case 1:
+            return this->arrayVectors[1];
+        case 2:
+            return this->arrayVectors[2];
+        default:
+            throw std::out_of_range("Index out of range");
+    }
+}
+
+Vector3D Matrix3D::row(short index)
+{
+    if (index > 2 || index < 0)
+        throw std::out_of_range("Index out of range");
+    return this->arrayVectors[index];
+}
+
+Vector3D Matrix3D::column(short index)
+{
+    if (index > 2 || index < 0)
+        throw std::out_of_range("Index out of range");
+
+    Matrix3D transposed = findTranspose(*this);
+
+    return transposed.arrayVectors[index];
+
 }

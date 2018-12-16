@@ -3,7 +3,10 @@
 
 CMakeFiles/untitled.dir/Matrix3D.cpp.o
  /cs/usr/kareem/CLionProjects/ex1/Matrix3D.cpp
+ /cs/usr/kareem/CLionProjects/ex1/Matrix3D.h
+ /cs/usr/kareem/CLionProjects/ex1/Vector3D.h
 CMakeFiles/untitled.dir/Vector3D.cpp.o
+ /cs/usr/kareem/CLionProjects/ex1/Matrix3D.h
  /cs/usr/kareem/CLionProjects/ex1/Vector3D.cpp
  /cs/usr/kareem/CLionProjects/ex1/Vector3D.h
 CMakeFiles/untitled.dir/ex1.cpp.o

@@ -45,11 +45,12 @@ public:
     double norm();
     double dist(const Vector3D v2);
 
-
+    friend std::istream& operator>>(std::istream &in, Vector3D& v1);
     friend std::ostream& operator<<(std::ostream &out, const Vector3D vec);
 
     Vector3D&operator=(const Vector3D v2);
 
+    double& operator[](int index);
 
 
 private:
