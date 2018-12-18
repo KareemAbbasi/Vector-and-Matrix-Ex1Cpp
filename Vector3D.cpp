@@ -197,26 +197,19 @@ double& Vector3D::operator[](int index)
 int main(){
     Vector3D a(3.0, 2.0, 5.0);
     std::cout << "a.norm = " << a.norm() << std::endl;
-    Vector3D b(7.0, 1.0, 5);
+    Vector3D b(7.0, 1.0, 0);
     std::cout << "a.dist(b) = " << a.dist(b) << std::endl;
 
-    Vector3D c(1, 1, 1);
+    Vector3D c(5.0, 1.0, 4.0);
 
     Matrix3D m(a,b,c);
-    Matrix3D m1(1,2,3,4,1,0,0,8,1);
 
-//    m*=m1;
-    Matrix3D nm = m *m1;
-
-    std::cout << nm;
-
-    Vector3D vec = m * a;
     std::cout << "..." << std::endl;
     std::cout << m << std::endl;
 
 //    m[1] = a + b;
     std::cout << "..." << std::endl;
-    std::cout << m.column(-1) << std::endl;
+    std::cout << "det is:  " << m.determinant() << std::endl;
 
     return 0;
 
