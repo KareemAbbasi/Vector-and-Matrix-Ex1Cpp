@@ -4,8 +4,8 @@
 #include <vector>
 #include "Vector3D.h"
 
-#ifndef UNTITLED_MATRIX3D_H
-#define UNTITLED_MATRIX3D_H
+#ifndef MATRIX3D_H
+#define MATRIX3D_H
 
 class Matrix3D
 {
@@ -53,4 +53,4 @@ private:
     Vector3D arrayVectors[3];
 };
 
-#endif //UNTITLED_MATRIX3D_H
+#endif //MATRIX3D_H

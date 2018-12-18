@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/cs/usr/kareem/CLionProjects/ex1/Matrix3D.cpp
-Matrix3D.h
-/cs/usr/kareem/CLionProjects/ex1/Matrix3D.h
-
 /cs/usr/kareem/CLionProjects/ex1/Matrix3D.h
 vector
 -
@@ -24,10 +20,6 @@ Matrix3D.h
 iostream
 -
 cmath
--
-vector
--
-numeric
 -
 
 /cs/usr/kareem/CLionProjects/ex1/Vector3D.h

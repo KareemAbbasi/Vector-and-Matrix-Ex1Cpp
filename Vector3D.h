@@ -3,8 +3,8 @@
 //
 #include <iostream>
 
-#ifndef UNTITLED_VECTOR3D_H
-#define UNTITLED_VECTOR3D_H
+#ifndef VECTOR3D_H
+#define VECTOR3D_H
 
 class Vector3D
 {
@@ -60,4 +60,4 @@ private:
 };
 
 
-#endif //UNTITLED_VECTOR3D_H
+#endif //VECTOR3D_H

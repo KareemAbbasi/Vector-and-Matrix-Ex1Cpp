@@ -244,21 +244,28 @@ Vector3D& Matrix3D::operator[](int index)
             return this->arrayVectors[2];
         default:
             std::cerr << "Index out of range" << std::endl;
+            return this->arrayVectors[0];
     }
+
 }
 
 Vector3D Matrix3D::row(short index)
 {
     if (index > 2 || index < 0)
+    {
         std::cerr << "Index out of range" << std::endl;
+        return this->arrayVectors[0];
+    }
     return this->arrayVectors[index];
 }
 
 Vector3D Matrix3D::column(short index)
 {
     if (index > 2 || index < 0)
+    {
         std::cerr << "Index out of range" << std::endl;
-
+        return this->arrayVectors[0];
+    }
     Matrix3D transposed = findTranspose(*this);
 
     return transposed.arrayVectors[index];

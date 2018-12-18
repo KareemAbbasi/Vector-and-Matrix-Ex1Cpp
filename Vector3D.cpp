@@ -9,9 +9,6 @@
 #include <cmath>
 
 
-#include <vector>
-#include <numeric>
-
 Vector3D::Vector3D()
 {
     this->x = 0;
@@ -194,19 +191,20 @@ double& Vector3D::operator[](int index)
             return this->z;
         default:
             std::cerr << "Index out of range" << std::endl;
+            return this->x;
     }
 }
 
 
-int main(){
-    Matrix3D m;
-    while(std::cin >> m)
-    {
-        std::cout << m;
-        std::cout << m*m;
-    }
-
-    return 0;
-
-}
+//int main(){
+//    Matrix3D m;
+//    while(std::cin >> m)
+//    {
+//        std::cout << m;
+//        std::cout << m*m;
+//    }
+//
+//    return 0;
+//
+//}
 
