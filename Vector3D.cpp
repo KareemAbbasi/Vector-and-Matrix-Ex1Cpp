@@ -291,7 +291,7 @@ std::istream& operator>>(std::istream &in, Vector3D& v1)
  */
 std::ostream& operator<<(std::ostream &out, const Vector3D vec)
 {
-    out << vec.x << " " << vec.y << " " << vec.z << std::endl;
+    out << vec.x << " " << vec.y << " " << vec.z ;
     return out;
 }
 
@@ -300,14 +300,14 @@ std::ostream& operator<<(std::ostream &out, const Vector3D vec)
  * @param v2
  * @return
  */
-Vector3D& Vector3D::operator=(const Vector3D v2)
-{
-    this->x = v2.x;
-    this->y = v2.y;
-    this->z = v2.z;
-
-    return *this;
-}
+//Vector3D& Vector3D::operator=(const Vector3D v2)
+//{
+//    this->x = v2.x;
+//    this->y = v2.y;
+//    this->z = v2.z;
+//
+//    return *this;
+//}
 
 /**
  * Reads and writes to an index in the vector.

@@ -150,7 +150,7 @@ public:
      * @param m1
      * @return
      */
-    friend std::ostream& operator<<(std::ostream &out, const Matrix3D& m1);
+    friend std::ostream& operator<<(std::ostream &out, Matrix3D m1);
 
 
     /**

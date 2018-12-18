@@ -99,6 +99,9 @@
 		<Unit filename="/cs/usr/kareem/CLionProjects/ex1/ex1.cpp">
 			<Option target="untitled"/>
 		</Unit>
+		<Unit filename="/cs/usr/kareem/CLionProjects/ex1/tester.cpp">
+			<Option target="untitled"/>
+		</Unit>
 		<Unit filename="/cs/usr/kareem/CLionProjects/ex1/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

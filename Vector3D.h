@@ -205,7 +205,7 @@ public:
      * @param v2
      * @return
      */
-    Vector3D&operator=(const Vector3D v2);
+//    Vector3D&operator=(const Vector3D v2);
 
     /**
      * Reads and writes to an index in the vector.

@@ -160,7 +160,7 @@ Matrix3D& Matrix3D::operator*=(Matrix3D m2)
         Vector3D newRow;
         for (int j = 0; j < 3; ++j)
         {
-            double newVal = this->arrayVectors[i]* m2Transpose.arrayVectors[j];
+            double newVal = this->arrayVectors[i] * m2Transpose.arrayVectors[j];
             newRow[j] = newVal;
         }
         this->arrayVectors[i] = newRow;
@@ -241,7 +241,7 @@ Matrix3D operator-(Matrix3D m1, Matrix3D m2)
  */
 Matrix3D& Matrix3D::operator*=(double num)
 {
-    for (Vector3D v : this->arrayVectors)
+    for (Vector3D &v : this->arrayVectors)
     {
         v = Vector3D(v.getX()*num, v.getY()*num, v.getZ()*num);
     }
@@ -256,7 +256,7 @@ Matrix3D& Matrix3D::operator*=(double num)
  */
 Matrix3D& Matrix3D::operator/=(double num)
 {
-    for (Vector3D v : this->arrayVectors)
+    for (Vector3D &v : this->arrayVectors)
     {
         v = Vector3D(v.getX() / num, v.getY() / num, v.getZ() / num);
     }
@@ -303,12 +303,11 @@ std::istream& operator>>(std::istream &in,  Matrix3D &m1)
  * @param m1
  * @return
  */
-std::ostream& operator<<(std::ostream &out, const Matrix3D &m1)
+std::ostream& operator<<(std::ostream &out, Matrix3D m1)
 {
-    for (Vector3D v : m1.arrayVectors)
-    {
-        out << v;
-    }
+    out << m1[0] << std::endl;
+    out << m1[1] << std::endl;
+    out << m1[2];
     return out;
 }
 

@@ -7,6 +7,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/cs/usr/kareem/CLionProjects/ex1/Matrix3D.cpp" "/cs/usr/kareem/CLionProjects/ex1/cmake-build-debug/CMakeFiles/untitled.dir/Matrix3D.cpp.o"
   "/cs/usr/kareem/CLionProjects/ex1/Vector3D.cpp" "/cs/usr/kareem/CLionProjects/ex1/cmake-build-debug/CMakeFiles/untitled.dir/Vector3D.cpp.o"
   "/cs/usr/kareem/CLionProjects/ex1/ex1.cpp" "/cs/usr/kareem/CLionProjects/ex1/cmake-build-debug/CMakeFiles/untitled.dir/ex1.cpp.o"
+  "/cs/usr/kareem/CLionProjects/ex1/tester.cpp" "/cs/usr/kareem/CLionProjects/ex1/cmake-build-debug/CMakeFiles/untitled.dir/tester.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

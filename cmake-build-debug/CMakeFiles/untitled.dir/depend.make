@@ -12,3 +12,7 @@ CMakeFiles/untitled.dir/ex1.cpp.o: ../Matrix3D.h
 CMakeFiles/untitled.dir/ex1.cpp.o: ../Vector3D.h
 CMakeFiles/untitled.dir/ex1.cpp.o: ../ex1.cpp
 
+CMakeFiles/untitled.dir/tester.cpp.o: ../Matrix3D.h
+CMakeFiles/untitled.dir/tester.cpp.o: ../Vector3D.h
+CMakeFiles/untitled.dir/tester.cpp.o: ../tester.cpp
+
