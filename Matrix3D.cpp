@@ -3,6 +3,9 @@
 //
 #include "Matrix3D.h"
 
+/**
+ * Default constructor.
+ */
 Matrix3D::Matrix3D()
 {
     Vector3D v1 = Vector3D(0, 0, 0);
@@ -14,6 +17,10 @@ Matrix3D::Matrix3D()
     this->arrayVectors[2] = v3;
 }
 
+/**
+ *Ceates a new Matrix where all of its values are the given num.
+ * @param num The given num.
+ */
 Matrix3D::Matrix3D(double num)
 {
     Vector3D v1 = Vector3D(num, 0, 0);
@@ -25,6 +32,18 @@ Matrix3D::Matrix3D(double num)
     this->arrayVectors[2] = v3;
 }
 
+/**
+ * Creates a new Matrix with the values of 9 given numbers.
+ * @param n1
+ * @param n2
+ * @param n3
+ * @param n4
+ * @param n5
+ * @param n6
+ * @param n7
+ * @param n8
+ * @param n9
+ */
 Matrix3D::Matrix3D(double n1, double n2, double n3, double n4, double n5, double n6, double n7, double n8, double n9)
 {
     Vector3D v1 = Vector3D(n1, n2, n3);
@@ -36,6 +55,10 @@ Matrix3D::Matrix3D(double n1, double n2, double n3, double n4, double n5, double
     this->arrayVectors[2] = v3;
 }
 
+/**
+ * Creates a new matrix from the values of a given array of size 9.
+ * @param nums The given array.
+ */
 Matrix3D::Matrix3D(double *nums)
 {
     unsigned int i = 0;
@@ -53,6 +76,10 @@ Matrix3D::Matrix3D(double *nums)
     }
 }
 
+/**
+ * Creates a new matrix from the values of a given 2d array of size 3x3.
+ * @param nums the given array
+ */
 Matrix3D::Matrix3D(double nums[3][3])
 {
     unsigned int i = 0;
@@ -63,6 +90,13 @@ Matrix3D::Matrix3D(double nums[3][3])
     }
 }
 
+/**
+ * Creates a new martix from the values of three given vectors where each vector is a
+ * row in the matrix.
+ * @param v1 First vector.
+ * @param v2 second vector.
+ * @param v3 third vector.
+ */
 Matrix3D::Matrix3D(Vector3D v1, Vector3D v2, Vector3D v3)
 {
     this->arrayVectors[0] = v1;
@@ -70,6 +104,10 @@ Matrix3D::Matrix3D(Vector3D v1, Vector3D v2, Vector3D v3)
     this->arrayVectors[2] = v3;
 }
 
+/**
+ * Copy constructor, creates a new matrix from the values of a given array.
+ * @param matrix3D the given array.
+ */
 Matrix3D::Matrix3D(const Matrix3D &matrix3D)
 {
     for (int i = 0; i < 3; ++i)
@@ -78,6 +116,11 @@ Matrix3D::Matrix3D(const Matrix3D &matrix3D)
     }
 }
 
+/**
+ * Adds a given array to the current array.
+ * @param m2 the given array.
+ * @return The result of the addition.
+ */
 Matrix3D& Matrix3D::operator+=(const Matrix3D m2)
 {
     for (int i = 0; i < 3; ++i)
@@ -88,6 +131,11 @@ Matrix3D& Matrix3D::operator+=(const Matrix3D m2)
     return *this;
 }
 
+/**
+ * subtracts a given array from the current array.
+ * @param m2 the given array.
+ * @return The result of the subtraction.
+ */
 Matrix3D& Matrix3D::operator-=(const Matrix3D m2)
 {
     for (int i = 0; i < 3; ++i)
@@ -98,6 +146,11 @@ Matrix3D& Matrix3D::operator-=(const Matrix3D m2)
     return *this;
 }
 
+/**
+ * multiplies the current array with a given array
+ * @param m2 the given array
+ * @return the result
+ */
 Matrix3D& Matrix3D::operator*=(Matrix3D m2)
 {
     Matrix3D m2Transpose = findTranspose(m2);
@@ -115,6 +168,12 @@ Matrix3D& Matrix3D::operator*=(Matrix3D m2)
     return *this;
 }
 
+/**
+ * Multiplies two given matrices.
+ * @param m1 The first matrix.
+ * @param m2 The second matrix.
+ * @return The new matrix which is the result.
+ */
 Matrix3D operator*(const Matrix3D m1, const Matrix3D m2)
 {
     Matrix3D newMat;
@@ -133,6 +192,12 @@ Matrix3D operator*(const Matrix3D m1, const Matrix3D m2)
     return newMat;
 }
 
+/**
+ * Adds two given array together.
+ * @param m1 The first matrix.
+ * @param m2 The second matrix.
+ * @return A new matrix which is the result.
+ */
 Matrix3D operator+(Matrix3D m1, Matrix3D m2)
 {
     Matrix3D newMat;
@@ -148,6 +213,12 @@ Matrix3D operator+(Matrix3D m1, Matrix3D m2)
     return newMat;
 }
 
+/**
+ * Subtracts two given matrices.
+ * @param m1 The first array.
+ * @param m2 The second array.
+ * @return A new matrix which is the result.
+ */
 Matrix3D operator-(Matrix3D m1, Matrix3D m2)
 {
     Matrix3D newMat;
@@ -163,6 +234,11 @@ Matrix3D operator-(Matrix3D m1, Matrix3D m2)
     return newMat;
 }
 
+/**
+ * Multiplies the current matrix with a given number.
+ * @param num The given number.
+ * @return The result.
+ */
 Matrix3D& Matrix3D::operator*=(double num)
 {
     for (Vector3D v : this->arrayVectors)
@@ -173,6 +249,11 @@ Matrix3D& Matrix3D::operator*=(double num)
     return *this;
 }
 
+/**
+ * Divides the current matrix with a given number.
+ * @param num the given number.
+ * @return the result.
+ */
 Matrix3D& Matrix3D::operator/=(double num)
 {
     for (Vector3D v : this->arrayVectors)
@@ -184,7 +265,12 @@ Matrix3D& Matrix3D::operator/=(double num)
 }
 
 
-//TODO wrong, need to return vector
+/**
+ * Multiplies a given matrix with a given vector.
+ * @param m1 the given matrix.
+ * @param v the given vector.
+ * @return a new matrix which is the result.
+ */
 Vector3D operator*(Matrix3D m1, Vector3D v)
 {
     Vector3D newVec;
@@ -197,6 +283,12 @@ Vector3D operator*(Matrix3D m1, Vector3D v)
     return newVec;
 }
 
+/**
+ * Creates a new Matrix with the values from the stdin.
+ * @param in
+ * @param m1
+ * @return
+ */
 std::istream& operator>>(std::istream &in,  Matrix3D &m1)
 {
 
@@ -205,6 +297,12 @@ std::istream& operator>>(std::istream &in,  Matrix3D &m1)
     return in;
 }
 
+/**
+ * Prints a given array to the stdout
+ * @param out
+ * @param m1
+ * @return
+ */
 std::ostream& operator<<(std::ostream &out, const Matrix3D &m1)
 {
     for (Vector3D v : m1.arrayVectors)
@@ -214,6 +312,11 @@ std::ostream& operator<<(std::ostream &out, const Matrix3D &m1)
     return out;
 }
 
+/**
+ * Find the transposed matrix of a given matrix.
+ * @param m the given matrix
+ * @return the transposed matrix.
+ */
 Matrix3D findTranspose(Matrix3D m)
 {
     Matrix3D m2Transpose;
@@ -232,6 +335,11 @@ Matrix3D findTranspose(Matrix3D m)
     return m2Transpose;
 }
 
+/**
+ * returns the vector which is in the given index of the matrix.
+ * @param index the given index.
+ * @return The vector.
+ */
 Vector3D& Matrix3D::operator[](int index)
 {
     switch(index)
@@ -249,6 +357,11 @@ Vector3D& Matrix3D::operator[](int index)
 
 }
 
+/**
+ * finds the Vector which is in the given index.
+ * @param index the given index.
+ * @return the vector in the index.
+ */
 Vector3D Matrix3D::row(short index)
 {
     if (index > 2 || index < 0)
@@ -259,6 +372,10 @@ Vector3D Matrix3D::row(short index)
     return this->arrayVectors[index];
 }
 
+/**
+ * @param index The given index.
+ * @return returns the column of the matrix in the given index.
+ */
 Vector3D Matrix3D::column(short index)
 {
     if (index > 2 || index < 0)
@@ -272,6 +389,9 @@ Vector3D Matrix3D::column(short index)
 
 }
 
+/**
+ * @return returns the sum of the elements in the diagonal of the current matrix.
+ */
 double Matrix3D::trace()
 {
     double sum = 0;
@@ -289,6 +409,9 @@ double Matrix3D::trace()
     return sum;
 }
 
+/**
+ * @return returns the determinant of the current array.
+ */
 double Matrix3D::determinant()
 {
 
