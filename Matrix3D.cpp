@@ -258,7 +258,7 @@ Matrix3D& Matrix3D::operator/=(double num)
 {
     for (Vector3D v : this->arrayVectors)
     {
-        v = Vector3D(v.getX()/num, v.getY()/num, v.getZ()/num);
+        v = Vector3D(v.getX() / num, v.getY() / num, v.getZ() / num);
     }
 
     return *this;
@@ -397,9 +397,9 @@ double Matrix3D::trace()
     double sum = 0;
     for (int i = 0; i < 3; ++i)
     {
-        for (int j =0; j < 3; ++j)
+        for (int j = 0; j < 3; ++j)
         {
-            if (i==j)
+            if (i == j)
             {
                 sum += this->arrayVectors[i][j];
             }

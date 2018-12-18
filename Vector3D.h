@@ -6,6 +6,9 @@
 #ifndef VECTOR3D_H
 #define VECTOR3D_H
 
+/**
+ * Vector3D class
+ */
 class Vector3D
 {
 public:

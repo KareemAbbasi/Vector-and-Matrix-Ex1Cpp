@@ -13,6 +13,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c663ba27-a152-4ae7-bdf5-1d75d8b6fba7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/Matrix3D.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Matrix3D.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Matrix3D.h" beforeDir="false" afterPath="$PROJECT_DIR$/Matrix3D.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vector3D.h" beforeDir="false" afterPath="$PROJECT_DIR$/Vector3D.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ex1.tar" beforeDir="false" afterPath="$PROJECT_DIR$/ex1.tar" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,25 +23,6 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/Matrix3D.h">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="737">
-                    <caret line="177" column="4" lean-forward="true" selection-start-line="177" selection-start-column="4" selection-end-line="179" selection-end-column="7" />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FUSProjectUsageTrigger">
@@ -79,29 +63,29 @@
         <counts>
           <entry key="Makefile" value="5" />
           <entry key="cpp" value="12" />
-          <entry key="h" value="6" />
+          <entry key="h" value="7" />
           <entry key="tester" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CMakeLists.txt" value="4" />
-          <entry key="ObjectiveC" value="18" />
+          <entry key="ObjectiveC" value="19" />
           <entry key="PLAIN_TEXT" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Makefile" value="2" />
-          <entry key="cpp" value="5740" />
-          <entry key="h" value="6228" />
+          <entry key="cpp" value="5749" />
+          <entry key="h" value="6277" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CMakeLists.txt" value="2" />
-          <entry key="Doxygen file" value="58" />
-          <entry key="ObjectiveC" value="11910" />
+          <entry key="Doxygen file" value="60" />
+          <entry key="ObjectiveC" value="11966" />
         </counts>
       </usages-collector>
     </session>
@@ -140,8 +124,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Matrix3D.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="524">
-              <caret line="413" column="3" lean-forward="true" selection-start-line="413" selection-start-column="3" selection-end-line="413" selection-end-column="3" />
+            <state relative-caret-position="479">
+              <caret line="401" column="21" selection-start-line="401" selection-start-column="21" selection-end-line="401" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -158,8 +142,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Vector3D.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2055">
-              <caret line="137" column="7" selection-start-line="137" selection-start-column="7" selection-end-line="137" selection-end-column="7" />
+            <state relative-caret-position="135">
+              <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Matrix3D.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -173,10 +166,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Makefile" />
-        <option value="$PROJECT_DIR$/Vector3D.h" />
         <option value="$PROJECT_DIR$/Vector3D.cpp" />
         <option value="$PROJECT_DIR$/ex1.cpp" />
         <option value="$PROJECT_DIR$/Matrix3D.h" />
+        <option value="$PROJECT_DIR$/Vector3D.h" />
         <option value="$PROJECT_DIR$/Matrix3D.cpp" />
       </list>
     </option>
@@ -269,18 +262,18 @@
       <workItem from="1544950050968" duration="11037000" />
       <workItem from="1544969850877" duration="1452000" />
       <workItem from="1545123043573" duration="14206000" />
-      <workItem from="1545146799405" duration="2526000" />
+      <workItem from="1545146799405" duration="2731000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42612000" />
+    <option name="totallyTimeSpent" value="42817000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="29" width="960" height="1147" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20860927" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20860927" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -291,7 +284,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.22112536" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.22112536" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32872656" />
       <window_info anchor="bottom" id="CMake" order="11" weight="0.3292683" />
@@ -351,13 +344,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Vector3D.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2055">
-          <caret line="137" column="7" selection-start-line="137" selection-start-column="7" selection-end-line="137" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Vector3D.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="750">
@@ -370,15 +356,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Matrix3D.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="737">
-          <caret line="177" column="4" lean-forward="true" selection-start-line="177" selection-start-column="4" selection-end-line="179" selection-end-column="7" />
+        <state relative-caret-position="135">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vector3D.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Matrix3D.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
-          <caret line="413" column="3" lean-forward="true" selection-start-line="413" selection-start-column="3" selection-end-line="413" selection-end-column="3" />
+        <state relative-caret-position="479">
+          <caret line="401" column="21" selection-start-line="401" selection-start-column="21" selection-end-line="401" selection-end-column="21" />
         </state>
       </provider>
     </entry>

@@ -7,6 +7,9 @@
 #ifndef MATRIX3D_H
 #define MATRIX3D_H
 
+/**
+ * Matrix3D class
+ */
 class Matrix3D
 {
 public:
