@@ -12,17 +12,15 @@ vector
 Vector3D.h
 /cs/usr/kareem/CLionProjects/ex1/Vector3D.h
 
-/cs/usr/kareem/CLionProjects/ex1/Vector3D.cpp
+/cs/usr/kareem/CLionProjects/ex1/Vector3D.h
+iostream
+-
+
+/cs/usr/kareem/CLionProjects/ex1/ex1.cpp
 Vector3D.h
 /cs/usr/kareem/CLionProjects/ex1/Vector3D.h
 Matrix3D.h
 /cs/usr/kareem/CLionProjects/ex1/Matrix3D.h
-iostream
--
-cmath
--
-
-/cs/usr/kareem/CLionProjects/ex1/Vector3D.h
 iostream
 -
 
