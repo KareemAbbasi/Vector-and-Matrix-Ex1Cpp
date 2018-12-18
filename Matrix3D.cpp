@@ -14,22 +14,22 @@ Matrix3D::Matrix3D()
     this->arrayVectors[2] = v3;
 }
 
-Matrix3D::Matrix3D(double n1, double n2, double n3, double n4, double n5, double n6, double n7, double n8, double n9)
+Matrix3D::Matrix3D(double num)
 {
-    Vector3D v1 = Vector3D(n1, n2, n3);
-    Vector3D v2 = Vector3D(n4, n5, n6);
-    Vector3D v3 = Vector3D(n7, n8, n9);
+    Vector3D v1 = Vector3D(num, 0, 0);
+    Vector3D v2 = Vector3D(0, num, 0);
+    Vector3D v3 = Vector3D(0, 0, num);
 
     this->arrayVectors[0] = v1;
     this->arrayVectors[1] = v2;
     this->arrayVectors[2] = v3;
 }
 
-Matrix3D::Matrix3D(double num)
+Matrix3D::Matrix3D(double n1, double n2, double n3, double n4, double n5, double n6, double n7, double n8, double n9)
 {
-    Vector3D v1 = Vector3D(num, 0, 0);
-    Vector3D v2 = Vector3D(0, num, 0);
-    Vector3D v3 = Vector3D(0, 0, num);
+    Vector3D v1 = Vector3D(n1, n2, n3);
+    Vector3D v2 = Vector3D(n4, n5, n6);
+    Vector3D v3 = Vector3D(n7, n8, n9);
 
     this->arrayVectors[0] = v1;
     this->arrayVectors[1] = v2;

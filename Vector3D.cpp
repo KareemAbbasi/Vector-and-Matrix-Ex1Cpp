@@ -177,7 +177,7 @@ Vector3D operator*(const Vector3D v2, const double num)
  */
 Vector3D operator/(const Vector3D v2, const double num)
 {
-    return Vector3D(v2.x / num, v2.y / num, v2.z / num);;
+    return Vector3D(v2.x / num, v2.y / num, v2.z / num);
 }
 
 /**
@@ -236,7 +236,8 @@ double operator|(const Vector3D v1, const Vector3D v2)
  * @param v2 The second vector.
  * @return The result.
  */
-double operator*(const Vector3D v1, const Vector3D v2) {
+double operator*(const Vector3D v1, const Vector3D v2)
+{
     return ((v1.x * v2.x) + (v1.y * v2.y) + (v1.z * v2.z));
 }
 

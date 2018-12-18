@@ -3,7 +3,12 @@
 
 #include <iostream>
 
-int main() {
+/**
+ * Main function, checks some implementations.
+ * @return
+ */
+int main()
+{
 
   Vector3D a(3.0, 2.0, 5.0);
   std::cout << "a.norm = " << a.norm() << std::endl;
