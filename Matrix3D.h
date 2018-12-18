@@ -71,35 +71,127 @@ public:
      * @return The result of the addition.
      */
     Matrix3D& operator+=(const Matrix3D m2);
+
+    /**
+     * subtracts a given array from the current array.
+     * @param m2 the given array.
+     * @return The result of the subtraction.
+     */
     Matrix3D& operator-=(const Matrix3D m2);
 
+
+    /**
+     * multiplies the current array with a given array
+     * @param m2 the given array
+     * @return the result
+     */
     Matrix3D& operator*=(Matrix3D m2);
 
+    /**
+     * Multiplies two given matrices.
+     * @param m1 The first matrix.
+     * @param m2 The second matrix.
+     * @return The new matrix which is the result.
+     */
     friend Matrix3D operator*(const Matrix3D m1, const Matrix3D m2);
+
+    /**
+     * Adds two given array together.
+     * @param m1 The first matrix.
+     * @param m2 The second matrix.
+     * @return A new matrix which is the result.
+     */
     friend Matrix3D operator+(const Matrix3D m1, const Matrix3D m2);
+
+    /**
+     * Subtracts two given matrices.
+     * @param m1 The first array.
+     * @param m2 The second array.
+     * @return A new matrix which is the result.
+     */
     friend Matrix3D operator-(const Matrix3D m1, const Matrix3D m2);
 
+    /**
+     * Multiplies the current matrix with a given number.
+     * @param num The given number.
+     * @return The result.
+     */
     Matrix3D& operator*=(double num);
+
+    /**
+     * Divides the current matrix with a given number.
+     * @param num the given number.
+     * @return the result.
+     */
     Matrix3D& operator/=(double num);
 
+    /**
+     * Multiplies a given matrix with a given vector.
+     * @param m1 the given matrix.
+     * @param v the given vector.
+     * @return a new matrix which is the result.
+     */
     friend Vector3D operator*(Matrix3D m1, Vector3D v);
 
+    /**
+     * Creates a new Matrix with the values from the stdin.
+     * @param in
+     * @param m1
+     * @return
+     */
     friend std::istream& operator>>(std::istream &in, Matrix3D& m1);
+
+    /**
+     * Prints a given array to the stdout
+     * @param out
+     * @param m1
+     * @return
+     */
     friend std::ostream& operator<<(std::ostream &out, const Matrix3D& m1);
 
 
-
+    /**
+     * returns the vector which is in the given index of the matrix.
+     * @param index the given index.
+     * @return The vector.
+     */
     Vector3D& operator[](int index);
 
+    /**
+     * finds the Vector which is in the given index.
+     * @param index the given index.
+     * @return the vector in the index.
+     */
     Vector3D row(short index);
+
+    /**
+     * @param index The given index.
+     * @return returns the column of the matrix in the given index.
+     */
     Vector3D column(short index);
+
+    /**
+     * @return returns the sum of the elements in the diagonal of the current matrix.
+     */
     double trace();
+
+    /**
+     * @return returns the determinant of the current array.
+     */
     double determinant();
 
+    /**
+     * Find the transposed matrix of a given matrix.
+     * @param m the given matrix
+     * @return the transposed matrix.
+     */
     friend Matrix3D findTranspose(Matrix3D m);
 
 
 private:
+    /**
+     * An array of the vectors of the matrix.
+     */
     Vector3D arrayVectors[3];
 };
 
