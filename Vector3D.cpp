@@ -8,6 +8,10 @@
 #include <iostream>
 #include <cmath>
 
+
+#include <vector>
+#include <numeric>
+
 Vector3D::Vector3D()
 {
     this->x = 0;
@@ -189,27 +193,18 @@ double& Vector3D::operator[](int index)
         case 2:
             return this->z;
         default:
-            throw std::out_of_range("Index out of range");
+            std::cerr << "Index out of range" << std::endl;
     }
 }
 
 
 int main(){
-    Vector3D a(3.0, 2.0, 5.0);
-    std::cout << "a.norm = " << a.norm() << std::endl;
-    Vector3D b(7.0, 1.0, 0);
-    std::cout << "a.dist(b) = " << a.dist(b) << std::endl;
-
-    Vector3D c(5.0, 1.0, 4.0);
-
-    Matrix3D m(a,b,c);
-
-    std::cout << "..." << std::endl;
-    std::cout << m << std::endl;
-
-//    m[1] = a + b;
-    std::cout << "..." << std::endl;
-    std::cout << "det is:  " << m.determinant() << std::endl;
+    Matrix3D m;
+    while(std::cin >> m)
+    {
+        std::cout << m;
+        std::cout << m*m;
+    }
 
     return 0;
 

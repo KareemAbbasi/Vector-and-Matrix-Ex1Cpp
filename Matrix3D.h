@@ -34,8 +34,8 @@ public:
 
     friend Vector3D operator*(Matrix3D m1, Vector3D v);
 
-    friend std::istream& operator>>(std::istream &in, Matrix3D &m1);
-    friend std::ostream& operator<<(std::ostream &out, Matrix3D &m1);
+    friend std::istream& operator>>(std::istream &in, Matrix3D& m1);
+    friend std::ostream& operator<<(std::ostream &out, const Matrix3D& m1);
 
 
 

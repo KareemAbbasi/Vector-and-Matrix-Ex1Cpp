@@ -197,17 +197,15 @@ Vector3D operator*(Matrix3D m1, Vector3D v)
     return newVec;
 }
 
-std::istream& operator>>(std::istream &in, Matrix3D &m1)
+std::istream& operator>>(std::istream &in,  Matrix3D &m1)
 {
-    for (Vector3D v : m1.arrayVectors)
-    {
-        in >> v;
-    }
+
+    in >> m1.arrayVectors[0] >> m1.arrayVectors[1] >> m1.arrayVectors[2];
 
     return in;
 }
 
-std::ostream& operator<<(std::ostream &out, Matrix3D &m1)
+std::ostream& operator<<(std::ostream &out, const Matrix3D &m1)
 {
     for (Vector3D v : m1.arrayVectors)
     {
@@ -245,21 +243,21 @@ Vector3D& Matrix3D::operator[](int index)
         case 2:
             return this->arrayVectors[2];
         default:
-            throw std::out_of_range("Index out of range");
+            std::cerr << "Index out of range" << std::endl;
     }
 }
 
 Vector3D Matrix3D::row(short index)
 {
     if (index > 2 || index < 0)
-        throw std::out_of_range("Index out of range");
+        std::cerr << "Index out of range" << std::endl;
     return this->arrayVectors[index];
 }
 
 Vector3D Matrix3D::column(short index)
 {
     if (index > 2 || index < 0)
-        throw std::out_of_range("Index out of range");
+        std::cerr << "Index out of range" << std::endl;
 
     Matrix3D transposed = findTranspose(*this);
 
@@ -269,7 +267,7 @@ Vector3D Matrix3D::column(short index)
 
 double Matrix3D::trace()
 {
-    double sum;
+    double sum = 0;
     for (int i = 0; i < 3; ++i)
     {
         for (int j =0; j < 3; ++j)
